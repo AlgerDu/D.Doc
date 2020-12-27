@@ -12,7 +12,7 @@ CREATE TABLE project (
 
     name            TEXT            NOT NULL,
     description     TEXT            NOT NULL,
-    domain_id BIGINT          NOT NULL,
+    domain_id       BIGINT          NOT NULL,
     curr_version_id BIGINT          NOT NULL,
 
     is_delete       BOOLEAN         NOT NULL,
