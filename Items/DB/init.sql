@@ -35,16 +35,14 @@ CREATE TABLE version (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE version_tree (
+CREATE TABLE doc_tree (
     id              BIGINT,
     bid             BIGINT          NOT NULL,
     
     parent_id       BIGINT          NOT NULL,
 
-    
-
-    object_id       BIGINT          NOT NULL,
-    object_type     TEXT            NOT NULL,
+    doc_bid         BIGINT          NOT NULL,
+    doc_metadata_id BIGINT          NOT NULL,
 
     PRIMARY KEY (id)
 );
