@@ -37,28 +37,26 @@ CREATE TABLE version (
 
 CREATE TABLE doc_tree (
     id              BIGINT,
-    bid             BIGINT          NOT NULL,
     
     parent_id       BIGINT          NOT NULL,
+    releation_id    BIGINT          NOT NULL,
 
-    doc_bid         BIGINT          NOT NULL,
-    doc_metadata_id BIGINT          NOT NULL,
+    doc_id          BIGINT          NOT NULL,
+
+    start_time      TIMESTAMPTZ     NOT NULL,
+    end_time        TIMESTAMPTZ     NOT NULL,
 
     PRIMARY KEY (id)
 );
 
 CREATE TABLE doc (
     id              BIGINT,
+    bid             BIGINT          NOT NULL,
 
     name            TEXT            NOT NULL,
-    type            TEXT            NOT NULL,
-    metadata        TEXT            NOT NULL,
-    description     TEXT            NOT NULL,
-
-    bid             BIGINT          NOT NULL,
-    operate_type    BIGINT          NOT NULL,
-    operate_time    TIMESTAMPTZ     NOT NULL,
-    operate_user_id BIGINT          NOT NULL,
+    
+    date            JSONB           NOT NULL,
+    tree_node_id    BIGINT          NOT NULL,
 
     PRIMARY KEY (id)
 );
