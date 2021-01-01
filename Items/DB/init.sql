@@ -3,6 +3,8 @@ CREATE TABLE domain (
 
     code            TEXT            NOT NULL,
     description     TEXT            NOT NULL,
+    
+    root_tree_id    BIGINT          NOT NULL,
 
     PRIMARY KEY (id)
 );
@@ -27,6 +29,8 @@ CREATE TABLE version (
     description     TEXT            NOT NULL,
     project_id      BIGINT          NOT NULL,
     base_version_id BIGINT          NOT NULL,
+
+    root_tree_id    BIGINT          NOT NULL,
     
     is_stable       BOOLEAN         NOT NULL,
     
@@ -56,7 +60,7 @@ CREATE TABLE doc (
     name            TEXT            NOT NULL,
     
     date            JSONB           NOT NULL,
-    tree_node_id    BIGINT          NOT NULL,
+    metadata_id     BIGINT          NOT NULL,
 
     PRIMARY KEY (id)
 );
