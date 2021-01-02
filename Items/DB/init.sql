@@ -1,4 +1,4 @@
-CREATE TABLE domain (
+CREATE TABLE doc_tree_pattern (
     id              BIGINT,
 
     code            TEXT            NOT NULL,
@@ -14,7 +14,7 @@ CREATE TABLE project (
 
     name            TEXT            NOT NULL,
     description     TEXT            NOT NULL,
-    domain_id       BIGINT          NOT NULL,
+    pattern_id      BIGINT          NOT NULL,
     curr_version_id BIGINT          NOT NULL,
 
     is_delete       BOOLEAN         NOT NULL,
@@ -54,13 +54,13 @@ CREATE TABLE doc_tree (
 );
 
 CREATE TABLE doc (
-    id              BIGINT,
-    bid             BIGINT          NOT NULL,
+    id               BIGINT,
+    bid              BIGINT          NOT NULL,
 
-    name            TEXT            NOT NULL,
+    name             TEXT            NOT NULL,
     
-    date            JSONB           NOT NULL,
-    metadata_id     BIGINT          NOT NULL,
+    date             JSONB           NOT NULL,
+    metadata_tree_id BIGINT          NOT NULL,
 
     PRIMARY KEY (id)
 );
