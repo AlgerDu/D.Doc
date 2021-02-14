@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "h5client"
+  "defaultProject": "h5client",
+  "cli": {
+    "analytics": "2232b5f3-985c-4c05-ad47-a49615622c11"
+  }
 }
