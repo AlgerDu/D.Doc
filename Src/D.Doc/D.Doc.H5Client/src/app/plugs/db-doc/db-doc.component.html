@@ -1,0 +1,18 @@
+<div nz-row>
+  <div style="margin:0px 8px;">
+    <button nz-button nzType="primary">添加表</button>
+  </div>
+</div>
+
+<div nz-row class="page-content">
+  <div nz-col nzSpan="3">
+    <nz-card>
+      <p>Card content</p>
+    </nz-card>
+  </div>
+  <div nz-col nzSpan="21" style="padding-left: 8px;">
+    <nz-card [nzBodyStyle]="{padding: 0}">
+      <router-outlet></router-outlet>
+    </nz-card>
+  </div>
+</div>
