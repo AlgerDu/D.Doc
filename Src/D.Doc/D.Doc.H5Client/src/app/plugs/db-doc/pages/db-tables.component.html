@@ -2,7 +2,6 @@
   <thead>
     <th class="space"></th>
     <th class="flag"></th>
-    <th class="data-th"> ID </th>
     <th class="data-th"> 字段名 </th>
     <th class="data-th"> 字段名 </th>
     <th class="data-th"> 可空 </th>
@@ -10,35 +9,27 @@
     <th class="data-th"> 说明 </th>
   </thead>
   <tbody>
-    <tr>
-      <td class="space"></td>
-      <td class="flag"></td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-    </tr>
-    <tr>
-      <td class="space"></td>
-      <td class="flag"></td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-    </tr>
-    <tr>
-      <td class="space"></td>
-      <td class="flag"></td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-      <td>dsd</td>
-    </tr>
+    <ng-container *ngFor="let item of schemaDatas;let i = index">
+      <ng-container *ngIf="item.type == schemaDateType.Table">
+        <tr *ngIf="i != 0"><td colspan="7"></td></tr>
+
+        <tr class="data-table">
+          <td class="space"></td>
+          <td class="flag">
+            <label nz-checkbox [(ngModel)]="item.isSelect"></label>
+          </td>
+          <td colspan="7">{{item.data['name']}}</td>
+        </tr>
+      </ng-container>
+
+      <tr *ngIf="item.type == schemaDateType.Field" class="data-field">
+        <td class="space"></td>
+        <td class="flag">
+          <label nz-checkbox [(ngModel)]="item.isSelect"></label>
+        </td>
+        <td>{{item.data['name']}}</td>
+      </tr>
+
+    </ng-container>
   </tbody>
 </table>
