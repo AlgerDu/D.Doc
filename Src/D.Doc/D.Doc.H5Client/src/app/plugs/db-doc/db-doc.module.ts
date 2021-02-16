@@ -22,6 +22,6 @@ import { DbTablesComponent } from './pages/db-tables.component';
     DbTablesComponent
   ],
   exports: [DbDocComponent],
-  bootstrap: []
+  bootstrap: [DbDocComponent]
 })
 export class DbDocModule { }

@@ -20,7 +20,6 @@ import { NzTableModule } from 'ng-zorro-antd/table';
 
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { DbDocComponent } from './pages/db-doc/db-doc.component';
 
 registerLocaleData(zh);
 
@@ -28,8 +27,7 @@ registerLocaleData(zh);
   declarations: [
     AppComponent,
     SidebarComponent,
-    HeaderComponent,
-    DbDocComponent
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
