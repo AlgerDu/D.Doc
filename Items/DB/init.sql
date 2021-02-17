@@ -41,11 +41,11 @@ CREATE TABLE version (
 
 CREATE TABLE doc_tree (
     id              BIGINT,
-    
     parent_id       BIGINT          NOT NULL,
+    
     releation_id    BIGINT          NOT NULL,
 
-    doc_id          BIGINT          NOT NULL,
+    doc_bid         BIGINT          NOT NULL,
 
     start_time      TIMESTAMPTZ     NOT NULL,
     end_time        TIMESTAMPTZ     NOT NULL,
@@ -61,6 +61,8 @@ CREATE TABLE doc (
     
     date             JSONB           NOT NULL,
     metadata_tree_id BIGINT          NOT NULL,
+
+    create_time      TIMESTAMPTZ     NOT NULL,
 
     PRIMARY KEY (id)
 );
