@@ -6,10 +6,42 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./db-tables.component.less']
 })
 export class DbTablesComponent implements OnInit {
-
+  selectAll = false;
   schemaDatas: DbSchemaData[];
   schemaDateType = DbSchemaType;
-  headers = ["ID", "Name", "Age", "Gender", "Country"];
+  headers = [{
+    key:"name",
+    text:"名字"
+  },
+  {
+    key:"ch_name",
+    text:"中文名"
+  },
+  {
+    key:"enableNull",
+    text:"可空"
+  },
+  {
+    key:"type",
+    text:"类型"
+  },
+  {
+    key:"length",
+    text:"长度"
+  },
+  {
+    key:"description",
+    text:"说明"
+  },
+  {
+    key:"lastUpdateUserName",
+    text:"最后修改人"
+  },
+  {
+    key:"lastUpdateTime",
+    text:"最后修改时间"
+  }
+];
 
   constructor() {
     this.schemaDatas = [
@@ -18,7 +50,9 @@ export class DbTablesComponent implements OnInit {
         type: DbSchemaType.Table,
         data: {
           name: "doc",
-          text: "文档"
+          ch_name: "文档",
+          lastUpdateUserName:"duzw",
+          lastUpdateTime:"2021-01-17 09:53"
         }
       },
       {
@@ -26,9 +60,13 @@ export class DbTablesComponent implements OnInit {
         type: DbSchemaType.Field,
         data: {
           name: "id",
-          text: "",
+          ch_name: "",
+          type:"long",
+          length :"",
           enableNull: false,
-          description: "主键"
+          description: "主键",
+          lastUpdateUserName:"duzw",
+          lastUpdateTime:"2021-01-17 09:53"
         }
       },
       {
@@ -36,9 +74,13 @@ export class DbTablesComponent implements OnInit {
         type: DbSchemaType.Field,
         data: {
           name: "name",
-          text: "文档名称",
+          ch_name: "",
+          type:"long",
+          length :"",
           enableNull: false,
-          description: ""
+          description: "主键",
+          lastUpdateUserName:"duzw",
+          lastUpdateTime:"2021-01-17 09:53"
         }
       },
       {
@@ -46,9 +88,13 @@ export class DbTablesComponent implements OnInit {
         type: DbSchemaType.Field,
         data: {
           name: "version",
-          text: "版本",
+          ch_name: "",
+          type:"long",
+          length :"",
           enableNull: false,
-          description: ""
+          description: "主键",
+          lastUpdateUserName:"duzw",
+          lastUpdateTime:"2021-01-17 09:53"
         }
       },
       {

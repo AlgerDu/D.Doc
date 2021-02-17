@@ -1,24 +1,24 @@
 <table class="db-table">
   <thead>
     <th class="space"></th>
-    <th class="flag"></th>
-    <th class="data-th"> 字段名 </th>
-    <th class="data-th"> 字段名 </th>
-    <th class="data-th"> 可空 </th>
-    <th class="data-th"> 可选值 </th>
-    <th class="data-th"> 说明 </th>
+    <td class="flag">
+      <label nz-checkbox [(ngModel)]="selectAll"></label>
+    </td>
+    <th class="data-th" *ngFor="let item of headers">
+      {{item.text}}
+    </th>
   </thead>
   <tbody>
     <ng-container *ngFor="let item of schemaDatas;let i = index">
       <ng-container *ngIf="item.type == schemaDateType.Table">
-        <tr *ngIf="i != 0"><td colspan="7"></td></tr>
+        <tr *ngIf="i != 0"><td [attr.colspan]="headers.length +2"></td></tr>
 
         <tr class="data-table">
           <td class="space"></td>
           <td class="flag">
             <label nz-checkbox [(ngModel)]="item.isSelect"></label>
           </td>
-          <td colspan="7">{{item.data['name']}}</td>
+          <td [attr.colspan]="headers.length">{{item.data['name']}}</td>
         </tr>
       </ng-container>
 
@@ -27,7 +27,11 @@
         <td class="flag">
           <label nz-checkbox [(ngModel)]="item.isSelect"></label>
         </td>
-        <td>{{item.data['name']}}</td>
+
+        <td *ngFor="let h of headers">
+          {{item.data[h.key]}}
+        </td>
+
       </tr>
 
     </ng-container>
