@@ -14,7 +14,6 @@ CREATE TABLE project (
 
     name            TEXT            NOT NULL,
     description     TEXT            NOT NULL,
-    pattern_id      BIGINT          NOT NULL,
     curr_version_id BIGINT          NOT NULL,
 
     is_delete       BOOLEAN         NOT NULL,
@@ -30,6 +29,7 @@ CREATE TABLE version (
     project_id      BIGINT          NOT NULL,
     base_version_id BIGINT          NOT NULL,
 
+    pattern_id      BIGINT          NOT NULL,
     root_tree_id    BIGINT          NOT NULL,
     
     is_stable       BOOLEAN         NOT NULL,
@@ -61,8 +61,6 @@ CREATE TABLE doc (
     
     date             JSONB           NOT NULL,
     metadata_tree_id BIGINT          NOT NULL,
-
-    create_time      TIMESTAMPTZ     NOT NULL,
 
     PRIMARY KEY (id)
 );
