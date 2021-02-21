@@ -6,4 +6,8 @@
     <RootNamespace>D.Infrastructures.Domain</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DocumentationFile>.\bin\D.Infrastructures.Domain.Abstractions.xml</DocumentationFile>
+  </PropertyGroup>
+
 </Project>
