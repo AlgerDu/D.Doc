@@ -1,5 +1,6 @@
 ﻿using D.Doc.Domain.PO;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Options;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,9 +12,16 @@ namespace D.Doc.Domain.Repository
     /// </summary>
     public class DocContext : DbContext
     {
-        public DocContext()
-        {
+        readonly DocContextOptions _options;
 
+        /// <summary>
+        /// 
+        /// </summary>
+        public DocContext(
+            IOptionsSnapshot<DocContextOptions> options
+            )
+        {
+            _options = options.Value;
         }
 
         /// <summary>
@@ -22,7 +30,7 @@ namespace D.Doc.Domain.Repository
         /// <param name="optionsBuilder"></param>
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql();
+            optionsBuilder.UseNpgsql(_options.ConnectionStrings);
         }
 
         /// <summary>
