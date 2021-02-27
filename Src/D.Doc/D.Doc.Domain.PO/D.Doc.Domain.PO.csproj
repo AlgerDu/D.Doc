@@ -4,4 +4,12 @@
     <TargetFramework>netstandard2.1</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DocumentationFile>.\bin\D.Doc.Domain.PO.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\D.Infrastructures\Domain.Abstractions\Domain.Abstractions.csproj" />
+  </ItemGroup>
+
 </Project>

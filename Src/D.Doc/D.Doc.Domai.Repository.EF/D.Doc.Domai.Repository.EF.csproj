@@ -5,8 +5,17 @@
     <RootNamespace>D.Doc.Domain.Repository</RootNamespace>
   </PropertyGroup>
 
+  <PropertyGroup>
+    <DocumentationFile>.\bin\D.Doc.Domain.Repository.EF.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.2" />
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="5.0.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\D.Doc.Domain.PO\D.Doc.Domain.PO.csproj" />
   </ItemGroup>
 
 </Project>
