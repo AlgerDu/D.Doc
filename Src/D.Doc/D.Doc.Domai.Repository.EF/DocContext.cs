@@ -11,18 +11,22 @@ namespace D.Doc.Domain.Repository
     /// </summary>
     public class DocContext : DbContext
     {
-        /// <summary>
-        /// default
-        /// </summary>
-        /// <param name="options"></param>
-        public DocContext(DbContextOptions options)
-            : base(options)
+        public DocContext()
         {
 
         }
 
         /// <summary>
-        /// 
+        /// optionsBuilder
+        /// </summary>
+        /// <param name="optionsBuilder"></param>
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            optionsBuilder.UseNpgsql();
+        }
+
+        /// <summary>
+        /// OnModelCreating
         /// </summary>
         /// <param name="modelBuilder"></param>
         protected override void OnModelCreating(ModelBuilder modelBuilder)
