@@ -13,7 +13,15 @@ namespace D.Doc.Domain.Repository
         {
             builder.Ignore(c => c.PK);
 
+            builder.ToTable("project");
+
             builder.HasKey(c => c.ID);
+
+            builder.Property(c => c.ID).HasColumnName("id");
+            builder.Property(c => c.Name).HasColumnName("name");
+            builder.Property(c => c.Description).HasColumnName("description");
+            builder.Property(c => c.CurrVersionID).HasColumnName("curr_version_id");
+            builder.Property(c => c.IsDelete).HasColumnName("is_delete");
         }
     }
 }
