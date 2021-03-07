@@ -21,7 +21,7 @@ CREATE TABLE project (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE version (
+CREATE TABLE project_version (
     id               BIGINT,
 
     name             TEXT            NOT NULL,
@@ -53,13 +53,13 @@ CREATE TABLE doc_tree (
     PRIMARY KEY (id)
 );
 
-CREATE TABLE doc (
+CREATE TABLE document (
     id               BIGINT,
     bid              BIGINT          NOT NULL,
 
     name             TEXT            NOT NULL,
     
-    date             JSONB           NOT NULL,
+    data             JSONB           NOT NULL,
     metadata_tree_id BIGINT          NOT NULL,
 
     PRIMARY KEY (id)

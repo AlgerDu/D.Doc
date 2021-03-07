@@ -7,21 +7,21 @@ using System.Text;
 
 namespace D.Doc.Domain.Repository
 {
-    internal class ProjectCfg : IEntityTypeConfiguration<Project>
+    internal class DocumentCfg : IEntityTypeConfiguration<Document>
     {
-        public void Configure(EntityTypeBuilder<Project> builder)
+        public void Configure(EntityTypeBuilder<Document> builder)
         {
             builder.Ignore(c => c.PK);
 
-            builder.ToTable("project");
+            builder.ToTable("document");
 
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.Id).HasColumnName("id");
             builder.Property(c => c.Name).HasColumnName("name");
-            builder.Property(c => c.Description).HasColumnName("description");
-            builder.Property(c => c.CurrVersionId).HasColumnName("curr_version_id");
-            builder.Property(c => c.IsDelete).HasColumnName("is_delete");
+            builder.Property(c => c.Bid).HasColumnName("bid");
+            builder.Property(c => c.Data).HasColumnName("data");
+            builder.Property(c => c.MetadataTreeId).HasColumnName("metadata_tree_id");
         }
     }
 }

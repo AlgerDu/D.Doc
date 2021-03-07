@@ -7,7 +7,7 @@ namespace D.Doc.Domain.PO
     /// <summary>
     /// 项目版本
     /// </summary>
-    public class Version : LongEntity
+    public class ProjectVersion : LongEntity
     {
         /// <summary>
         /// 版本名称

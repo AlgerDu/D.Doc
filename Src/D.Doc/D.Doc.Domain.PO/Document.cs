@@ -7,7 +7,7 @@ namespace D.Doc.Domain.PO
     /// <summary>
     /// 文档
     /// </summary>
-    public class Doc
+    public class Document : LongEntity
     {
         /// <summary>
         /// 业务 ID
@@ -22,7 +22,7 @@ namespace D.Doc.Domain.PO
         /// <summary>
         /// 数据
         /// </summary>
-        public string Date { get; set; }
+        public string Data { get; set; }
 
         /// <summary>
         /// 元数据

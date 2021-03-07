@@ -40,11 +40,36 @@ namespace D.Doc.Domain.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfiguration(new ProjectCfg());
+            modelBuilder.ApplyConfiguration(new ProjectVersionCfg());
+
+            modelBuilder.ApplyConfiguration(new DocumentCfg());
+            modelBuilder.ApplyConfiguration(new DocTreeCfg());
+            modelBuilder.ApplyConfiguration(new DocTreePatternCfg());
         }
 
         /// <summary>
         /// 项目列表
         /// </summary>
         public DbSet<Project> Projects { get; set; }
+
+        /// <summary>
+        /// 项目的版本
+        /// </summary>
+        public DbSet<ProjectVersion> ProjectVersions { get; set; }
+
+        /// <summary>
+        /// 文档
+        /// </summary>
+        public DbSet<Document> Docs { get; set; }
+
+        /// <summary>
+        /// 文档树
+        /// </summary>
+        public DbSet<DocTree> DocTrees { get; set; }
+
+        /// <summary>
+        /// 文档树模板
+        /// </summary>
+        public DbSet<DocTreePattern> DocTreePatterns { get; set; }
     }
 }
