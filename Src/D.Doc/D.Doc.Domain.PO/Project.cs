@@ -11,11 +11,6 @@ namespace D.Doc.Domain.PO
     public class Project : LongEntity
     {
         /// <summary>
-        /// 主键 ID
-        /// </summary>
-        public long ID { get; set; }
-
-        /// <summary>
         /// 项目名称
         /// </summary>
         public string Name { get; set; }
@@ -28,7 +23,7 @@ namespace D.Doc.Domain.PO
         /// <summary>
         /// （外键）项目当前版本记录的主键 ID
         /// </summary>
-        public long CurrVersionID { get; set; }
+        public long CurrVersionId { get; set; }
 
         /// <summary>
         /// 项目是否已经被删除

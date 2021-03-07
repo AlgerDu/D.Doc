@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="GraphQL" Version="3.3.2" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\D.Doc.Domai.Repository.EF\D.Doc.Domai.Repository.EF.csproj" />
   </ItemGroup>
 

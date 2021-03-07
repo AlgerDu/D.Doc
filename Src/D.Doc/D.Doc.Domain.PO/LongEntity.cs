@@ -10,8 +10,13 @@ namespace D.Doc.Domain.PO
     /// </summary>
     public abstract class LongEntity : IEntity<long>
     {
+        /// <summary>
+        /// 主键 ID
+        /// </summary>
+        public long Id { get; set; }
+
         ///<inheritdoc/>
-        public long PK { get; set; }
+        public long PK { get => Id; set => Id = value; }
 
         ///<inheritdoc/>
         public bool IsTransient()
