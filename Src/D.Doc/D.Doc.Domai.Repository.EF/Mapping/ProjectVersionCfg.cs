@@ -13,7 +13,7 @@ namespace D.Doc.Domain.Repository
         {
             builder.Ignore(c => c.PK);
 
-            builder.ToTable("version");
+            builder.ToTable("project_version");
 
             builder.HasKey(c => c.Id);
 

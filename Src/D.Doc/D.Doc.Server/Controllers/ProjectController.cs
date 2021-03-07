@@ -1,5 +1,7 @@
 ﻿using D.Doc.Domain.PO;
 using D.Doc.Domain.Repository;
+using D.Doc.Server.Models;
+using D.Utils;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,39 @@ namespace D.Doc.Server.Controllers
             )
         {
             _context = context;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        [HttpPost]
+        public IResult<long> PostProject([FromBody] AddProjectModel model)
+        {
+            var id = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+
+            var project = new Project()
+            {
+                Id = id,
+                Name = model.Name,
+                Description = model.Description
+            };
+
+            var version = new ProjectVersion()
+            {
+                Id = id++,
+                Name = model.InitVersion.Name,
+                Description = model.InitVersion.Description
+            };
+
+            project.CurrVersionId = version.Id;
+
+            _context.Projects.Add(project);
+            _context.ProjectVersions.Add(version);
+
+            _context.SaveChanges();
+
+            return Result.CreateSuccess<long>(id);
         }
 
         public IEnumerable<Project> Get()
