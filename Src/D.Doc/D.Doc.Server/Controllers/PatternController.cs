@@ -25,5 +25,5 @@ namespace D.Doc.Server.Controllers
         {
             return Result.CreateSuccess();
         }
-    }                                                                                                                                                                                              
+    }
 }
