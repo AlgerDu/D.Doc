@@ -18,7 +18,7 @@ namespace D.Doc.Domain.Repository
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.Id).HasColumnName("id");
-            builder.Property(c => c.Name).HasColumnName("name");
+            builder.Property(c => c.Code).HasColumnName("code");
             builder.Property(c => c.Bid).HasColumnName("bid");
             builder.Property(c => c.Data).HasColumnName("data");
             builder.Property(c => c.MetadataTreeId).HasColumnName("metadata_tree_id");

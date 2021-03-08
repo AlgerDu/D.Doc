@@ -29,7 +29,7 @@ CREATE TABLE project_version (
     project_id       BIGINT          NOT NULL,
     base_version_id  BIGINT          NOT NULL,
 
-    pattern_id       BIGINT          NOT NULL,
+    pattern_root_id  BIGINT          NOT NULL,
     doc_tree_root_id BIGINT          NOT NULL,
     
     is_stable        BOOLEAN         NOT NULL,
@@ -57,7 +57,7 @@ CREATE TABLE document (
     id               BIGINT,
     bid              BIGINT          NOT NULL,
 
-    name             TEXT            NOT NULL,
+    code             TEXT            NOT NULL,
     
     data             JSONB           NOT NULL,
     metadata_tree_id BIGINT          NOT NULL,

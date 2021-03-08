@@ -32,7 +32,7 @@ namespace D.Doc.Domain.PO
         /// <summary>
         /// 版本的文档树模板
         /// </summary>
-        public long PatternId { get; set; }
+        public long PatternRootId { get; set; }
 
         /// <summary>
         /// 文档树根节点 ID

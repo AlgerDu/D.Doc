@@ -15,9 +15,9 @@ namespace D.Doc.Domain.PO
         public long Bid { get; set; }
 
         /// <summary>
-        /// 名称
+        /// code，可能一定范围内要唯一
         /// </summary>
-        public string Name { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// 数据

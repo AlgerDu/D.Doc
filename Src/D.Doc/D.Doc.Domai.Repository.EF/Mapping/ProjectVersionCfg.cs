@@ -23,7 +23,7 @@ namespace D.Doc.Domain.Repository
 
             builder.Property(c => c.ProjectId).HasColumnName("project_id");
             builder.Property(c => c.BaseVersionId).HasColumnName("base_version_id");
-            builder.Property(c => c.PatternId).HasColumnName("pattern_id");
+            builder.Property(c => c.PatternRootId).HasColumnName("pattern_root_id");
             builder.Property(c => c.DocTreeRootId).HasColumnName("doc_tree_root_id");
 
             builder.Property(c => c.IsStable).HasColumnName("is_stable");
