@@ -1,4 +1,5 @@
-﻿using D.Doc.Server.Models;
+﻿using D.Doc.Domain.Repository;
+using D.Doc.Server.Models;
 using D.Utils;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,9 +13,13 @@ namespace D.Doc.Server.Controllers
     [ApiController]
     public class PatternController : ControllerBase
     {
-        public PatternController()
-        {
+        readonly DocContext _context;
 
+        public PatternController(
+            DocContext context
+            )
+        {
+            _context = context;
         }
 
         [HttpPost("api/projects/{project}/v/{version}/pattern")]
