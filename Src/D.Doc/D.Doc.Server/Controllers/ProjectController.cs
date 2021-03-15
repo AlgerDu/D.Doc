@@ -35,7 +35,7 @@ namespace D.Doc.Server.Controllers
 
             var project = new Project()
             {
-                Id = id,
+                Id = id++,
                 Name = model.Name,
                 Description = model.Description
             };
@@ -48,6 +48,7 @@ namespace D.Doc.Server.Controllers
             };
 
             project.CurrVersionId = version.Id;
+            version.ProjectId = project.Id;
 
             _context.Projects.Add(project);
             _context.ProjectVersions.Add(version);
