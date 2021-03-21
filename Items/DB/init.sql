@@ -58,6 +58,7 @@ CREATE TABLE document (
     bid              BIGINT          NOT NULL,
 
     code             TEXT            NOT NULL,
+    type             TEXT            NOT NULL,
     
     data             JSONB           NOT NULL,
     metadata_tree_id BIGINT          NOT NULL,
