@@ -20,6 +20,11 @@ namespace D.Doc.Domain.PO
         public string Code { get; set; }
 
         /// <summary>
+        /// 类型，不同类型的文档有不同的作用
+        /// </summary>
+        public string Type { get; set; }
+
+        /// <summary>
         /// 数据
         /// </summary>
         public string Data { get; set; }
