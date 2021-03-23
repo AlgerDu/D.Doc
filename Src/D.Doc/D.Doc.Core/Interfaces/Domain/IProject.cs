@@ -9,10 +9,17 @@ namespace D.Doc.Core
     /// </summary>
     public interface IProject
     {
-        long ID { get; set; }
+        long ID { get; }
 
         string Name { get; set; }
 
         string Description { get; set; }
+
+        IProjectVersion CurrentVersion { get; }
+    }
+
+    public interface IProjectVersion
+    {
+
     }
 }
