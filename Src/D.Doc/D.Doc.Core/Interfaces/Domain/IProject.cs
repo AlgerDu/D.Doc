@@ -1,4 +1,5 @@
-﻿using System;
+﻿using D.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -9,17 +10,14 @@ namespace D.Doc.Core
     /// </summary>
     public interface IProject
     {
-        long ID { get; }
+        long Id { get; }
 
         string Name { get; set; }
 
         string Description { get; set; }
 
         IProjectVersion CurrentVersion { get; }
-    }
 
-    public interface IProjectVersion
-    {
-
+        IEnumerable<IProjectVersion> Versions { get; }
     }
 }
