@@ -9,6 +9,8 @@ namespace D.Doc.Server.Models
     {
         public string Path { get; set; }
 
-        public string Data { get; set; }
+        //public string Data { get; set; }
+
+        public DocModel Data { get; set; }
     }
 }

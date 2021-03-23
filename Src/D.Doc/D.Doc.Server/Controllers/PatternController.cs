@@ -28,6 +28,8 @@ namespace D.Doc.Server.Controllers
             , [FromRoute] string version
             , [FromBody] PatternAddOrUpdateModel model)
         {
+            
+
             return Result.CreateSuccess();
         }
     }
