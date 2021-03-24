@@ -18,7 +18,7 @@ namespace D.Doc.Domain.Repository
             builder.HasKey(c => c.Id);
 
             builder.Property(c => c.Id).HasColumnName("id");
-            builder.Property(c => c.Name).HasColumnName("name");
+            builder.Property(c => c.Code).HasColumnName("code");
             builder.Property(c => c.Description).HasColumnName("description");
 
             builder.Property(c => c.ProjectId).HasColumnName("project_id");

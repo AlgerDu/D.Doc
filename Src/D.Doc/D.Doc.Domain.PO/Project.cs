@@ -11,6 +11,11 @@ namespace D.Doc.Domain.PO
     public class Project : LongEntity
     {
         /// <summary>
+        /// 项目编码
+        /// </summary>
+        public string Code { get; set; }
+
+        /// <summary>
         /// 项目名称
         /// </summary>
         public string Name { get; set; }

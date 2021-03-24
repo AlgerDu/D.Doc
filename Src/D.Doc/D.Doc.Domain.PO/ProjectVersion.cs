@@ -10,9 +10,9 @@ namespace D.Doc.Domain.PO
     public class ProjectVersion : LongEntity
     {
         /// <summary>
-        /// 版本名称
+        /// 版本号
         /// </summary>
-        public string Name { get; set; }
+        public string Code { get; set; }
 
         /// <summary>
         /// 描述

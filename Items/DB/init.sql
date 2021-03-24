@@ -12,6 +12,7 @@ CREATE TABLE doc_tree_pattern (
 CREATE TABLE project (
     id              BIGINT,
 
+    code            TEXT            NOT NULL,
     name            TEXT            NOT NULL,
     description     TEXT            NOT NULL,
     curr_version_id BIGINT          NOT NULL,
@@ -24,7 +25,7 @@ CREATE TABLE project (
 CREATE TABLE project_version (
     id               BIGINT,
 
-    name             TEXT            NOT NULL,
+    code             TEXT            NOT NULL,
     description      TEXT            NOT NULL,
     project_id       BIGINT          NOT NULL,
     base_version_id  BIGINT          NOT NULL,
