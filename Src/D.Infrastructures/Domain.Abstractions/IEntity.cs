@@ -22,7 +22,7 @@ namespace D.Infrastructures.Domain
         /// <summary>
         /// 唯一标识
         /// </summary>
-        TPrimaryKey PK { get; set; }
+        TPrimaryKey PK { get; }
 
         /// <summary>
         /// 是否瞬时对象（未持久化的对象）
