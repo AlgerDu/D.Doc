@@ -1,14 +1,17 @@
-﻿using System;
+﻿using D.Infrastructures.Domain;
+using D.Utils;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace D.Doc.Core
 {
+    /// <summary>
+    /// 项目的版本信息
+    /// </summary>
 
-    public interface IProjectVersion
+    public interface IProjectVersion : IEntity<long>
     {
-        long Id { get; }
-
         string Code { get; }
 
         string Description { get; set; }

@@ -1,4 +1,5 @@
-﻿using D.Utils;
+﻿using D.Infrastructures.Domain;
+using D.Utils;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -6,12 +7,10 @@ using System.Text;
 namespace D.Doc.Core
 {
     /// <summary>
-    /// 
+    /// 项目（聚合根）
     /// </summary>
-    public interface IProject
+    public interface IProject : IAggregateRoot<long>
     {
-        long Id { get; }
-
         string Name { get; set; }
 
         string Description { get; set; }
