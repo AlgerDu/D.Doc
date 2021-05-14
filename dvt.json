@@ -1,47 +1,55 @@
 {
-    "Config":{
-        "Nuget":{
-            "Template":"{major}.{minor}.{date}{index}"
-        },
-        "Group":{
-            "Template":"{major}.{minor}.{fix}.{date}{index}"
-        }
+  "Config": {
+    "Nuget": {
+      "Template": "{major}.{minor}.{date}{index}"
     },
-    "Stashs":[],
-    "Groups": {},
-    "Projects": [
-        {
-            "Name": "D.Doc.Core",
-            "Path": "./Src/D.Doc/D.Doc.Core/D.Doc.Core.csproj",
-            "Supports": []
-        },
-        {
-            "Name": "D.Doc.Domai.Repository.EF",
-            "Path": "./Src/D.Doc/D.Doc.Domai.Repository.EF/D.Doc.Domai.Repository.EF.csproj",
-            "Supports": [
-                "D.Doc.Core",
-                "D.Doc.Server"
-            ]
-        },
-        {
-            "Name": "D.Doc.Domain.PO",
-            "Path": "./Src/D.Doc/D.Doc.Domain.PO/D.Doc.Domain.PO.csproj",
-            "Supports": [
-                "D.Doc.Domai.Repository.EF"
-            ]
-        },
-        {
-            "Name": "D.Doc.Server",
-            "Path": "./Src/D.Doc/D.Doc.Server/D.Doc.Server.csproj",
-            "Supports": []
-        },
-        {
-            "Name": "Domain.Abstractions",
-            "Path": "./Src/D.Infrastructures/Domain.Abstractions/Domain.Abstractions.csproj",
-            "Supports": [
-                "D.Doc.Core",
-                "D.Doc.Domain.PO"
-            ]
-        }
+    "Group": {
+      "Template": "{major}.{minor}.{fix}.{date}{index}"
+    }
+  },
+  "Stashs": [
+    "Domain.Abstractions"
+  ],
+  "Groups": {
+    "doc": [
+      "D.Doc.Core",
+      "D.Doc.Server"
     ]
+  },
+  "Projects": [
+    {
+      "Name": "D.Doc.Core",
+      "Path": "./Src/D.Doc/D.Doc.Core/D.Doc.Core.csproj",
+      "Supports": []
+    },
+    {
+      "Name": "D.Doc.Domai.Repository.EF",
+      "Path": "./Src/D.Doc/D.Doc.Domai.Repository.EF/D.Doc.Domai.Repository.EF.csproj",
+      "Supports": [
+        "D.Doc.Core",
+        "D.Doc.Server"
+      ]
+    },
+    {
+      "Name": "D.Doc.Domain.PO",
+      "Path": "./Src/D.Doc/D.Doc.Domain.PO/D.Doc.Domain.PO.csproj",
+      "Supports": [
+        "D.Doc.Domai.Repository.EF"
+      ]
+    },
+    {
+      "Name": "D.Doc.Server",
+      "Path": "./Src/D.Doc/D.Doc.Server/D.Doc.Server.csproj",
+      "Supports": []
+    },
+    {
+      "Name": "Domain.Abstractions",
+      "Path": "./Src/D.Infrastructures/Domain.Abstractions/Domain.Abstractions.csproj",
+      "Supports": [
+        "D.Doc.Core",
+        "D.Doc.Domain.PO"
+      ]
+    }
+  ],
+  "Ignores": []
 }

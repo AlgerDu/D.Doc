@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
     <AssemblyName>D.Infrastructures.Domain.Abstractions</AssemblyName>
     <RootNamespace>D.Infrastructures.Domain</RootNamespace>
+    <Version>1.3.042405</Version>
+    <AssemblyVersion>1.3.0.0</AssemblyVersion>
+    <FileVersion>1.3.0.0</FileVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <DocumentationFile>.\bin\D.Infrastructures.Domain.Abstractions.xml</DocumentationFile>
   </PropertyGroup>
-
 </Project>

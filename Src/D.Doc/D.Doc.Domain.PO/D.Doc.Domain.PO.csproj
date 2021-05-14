@@ -1,15 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
+    <Version>1.0.042402</Version>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
   </PropertyGroup>
-
   <PropertyGroup>
     <DocumentationFile>.\bin\D.Doc.Domain.PO.xml</DocumentationFile>
   </PropertyGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\..\D.Infrastructures\Domain.Abstractions\Domain.Abstractions.csproj" />
   </ItemGroup>
-
 </Project>
